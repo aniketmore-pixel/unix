@@ -9,5 +9,5 @@ read r
 echo "Enter years: "
 read t
 
-ci=$(echo "scale=2; $p * (1 + ($r/100)) ^ $t - $p" | bc)
-echo "Compound Interest is $ci"
+ci=$(echo "$p * ((1 + $r/100)^$t) - $p" | bc -l)
+echo "$ci"
