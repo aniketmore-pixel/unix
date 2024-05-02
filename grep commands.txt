@@ -1,0 +1,43 @@
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id name dept salary
+24 Nkaniket IT 90000
+24 Nkaniket IT 90000
+90 Manas AIDS 70000
+32 Sheila EXTC 45000
+07 Jayden IT 5000
+12 Aarya IT 12000
+93 karan AIDS 48000
+102 Arjun Comps 48000
+107 Aryan Manager 53000
+901 Ajinkya Chem 55000
+907 Rohan IT 20000
+114 Vamshi IT 25000
+aniketmore@aniketmore:~/Desktop$ grep "karan" data1.lst
+93 karan AIDS 48000
+aniketmore@aniketmore:~/Desktop$ grep "Arjun" data1.lst
+102 Arjun Comps 48000
+aniketmore@aniketmore:~/Desktop$ grep -v "Aj" data1.lst
+id name dept salary
+24 Nkaniket IT 90000
+24 Nkaniket IT 90000
+90 Manas AIDS 70000
+32 Sheila EXTC 45000
+07 Jayden IT 5000
+12 Aarya IT 12000
+93 karan AIDS 48000
+102 Arjun Comps 48000
+107 Aryan Manager 53000
+907 Rohan IT 20000
+114 Vamshi IT 25000
+aniketmore@aniketmore:~/Desktop$ grep "IT" data1.lst
+24 Nkaniket IT 90000
+24 Nkaniket IT 90000
+07 Jayden IT 5000
+12 Aarya IT 12000
+907 Rohan IT 20000
+114 Vamshi IT 25000
+aniketmore@aniketmore:~/Desktop$ grep -n "Manager" data1.lst
+10:107 Aryan Manager 53000
+aniketmore@aniketmore:~/Desktop$ ^C
+aniketmore@aniketmore:~/Desktop$ 
+

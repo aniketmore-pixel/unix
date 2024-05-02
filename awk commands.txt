@@ -1,0 +1,21 @@
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id name dept salary
+24 Nkaniket IT 90000
+24 Nkaniket IT 90000
+90 Manas AIDS 70000
+32 Sheila EXTC 45000
+07 Jayden IT 5000
+12 Aarya IT 12000
+aniketmore@aniketmore:~/Desktop$ awk '$4<50000' data1.lst
+32 Sheila EXTC 45000
+07 Jayden IT 5000
+12 Aarya IT 12000
+aniketmore@aniketmore:~/Desktop$ awk '$3 == "IT"' data1.lst
+24 Nkaniket IT 90000
+24 Nkaniket IT 90000
+07 Jayden IT 5000
+12 Aarya IT 12000
+aniketmore@aniketmore:~/Desktop$ 
+
+
+

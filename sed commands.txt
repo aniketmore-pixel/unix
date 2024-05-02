@@ -1,0 +1,66 @@
+aniketmore@aniketmore:~$ cd Desktop
+aniketmore@aniketmore:~/Desktop$ echo "id,name,dept,salary" > data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "24,Aniket,IT,90000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "51,Chinmay,Comps,85000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "90,Adit,Chem,60000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "90,Pooja,EXTC,50000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "90,Manas,AIDS,70000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id,name,dept,salary
+24,Aniket,IT,90000
+51,Chinmay,Comps,85000
+90,Adit,Chem,60000
+90,Pooja,EXTC,50000
+90,Manas,AIDS,70000
+aniketmore@aniketmore:~/Desktop$ sed -n '4,$p' data1.lst
+90,Adit,Chem,60000
+90,Pooja,EXTC,50000
+90,Manas,AIDS,70000
+aniketmore@aniketmore:~/Desktop$ sed -n '$p' data1.lst
+90,Manas,AIDS,70000
+aniketmore@aniketmore:~/Desktop$ sed -i '3,5d' data1.lst
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id,name,dept,salary
+24,Aniket,IT,90000
+90,Manas,AIDS,70000
+aniketmore@aniketmore:~/Desktop$ sed -n '1,2p' data1.lst
+id,name,dept,salary
+24,Aniket,IT,90000
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id,name,dept,salary
+24,Aniket,IT,90000
+90,Manas,AIDS,70000
+aniketmore@aniketmore:~/Desktop$ echo "32,Ronit,EXTC,45000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "100,Rohit,IT,67000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "100,Jayden,IT,5000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id,name,dept,salary
+24,Aniket,IT,90000
+90,Manas,AIDS,70000
+32,Ronit,EXTC,45000
+100,Rohit,IT,67000
+100,Jayden,IT,5000
+aniketmore@aniketmore:~/Desktop$ sed -i '$d' data1.lst
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id,name,dept,salary
+24,Aniket,IT,90000
+90,Manas,AIDS,70000
+32,Ronit,EXTC,45000
+100,Rohit,IT,67000
+aniketmore@aniketmore:~/Desktop$ echo "07,Jayden,IT,5000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ echo "12,Aarya,IT,12000" >> data1.lst
+aniketmore@aniketmore:~/Desktop$ cat data1.lst
+id,name,dept,salary
+24,Aniket,IT,90000
+90,Manas,AIDS,70000
+32,Ronit,EXTC,45000
+100,Rohit,IT,67000
+07,Jayden,IT,5000
+12,Aarya,IT,12000
+aniketmore@aniketmore:~/Desktop$ sed -i '2p;5p' data1.lst
+aniketmore@aniketmore:~/Desktop$ sed -n '2p;5p' data1.lst
+24,Aniket,IT,90000
+32,Ronit,EXTC,45000
+aniketmore@aniketmore:~/Desktop$ 
+
+
